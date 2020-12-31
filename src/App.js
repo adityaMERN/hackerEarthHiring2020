@@ -69,6 +69,7 @@ function App() {
         <Basket
           cartItems={cartItems}
           onAdd={onAdd}
+          onRemove={onRemove} to delete
           
         ></Basket>
       </div>
@@ -78,4 +79,4 @@ function App() {
 
 export default App;
 
-// onRemove={onRemove} to delete
+// 
