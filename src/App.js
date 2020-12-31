@@ -8,16 +8,16 @@ import 'react-confirm-alert/src/react-confirm-alert.css';
 function App() {
   const { products } = data;
   const [cartItems, setCartItems] = useState([]);
-  // useEffect(()=>{
-  //   const dataset=localStorage.getItem("my-cart")
-  //   if (dataset) {
-  //     setCartItems(JSON.parse(dataset))
-  //   }
+  useEffect(()=>{
+    const dataset=localStorage.getItem("my-cart")
+    if (dataset) {
+      setCartItems(JSON.parse(dataset))
+    }
     
-  // },[]);
-  // useEffect(()=>{
-  //   localStorage.setItem("my-cart",JSON.stringify(cartItems))
-  // })
+  },[]);
+  useEffect(()=>{
+    localStorage.setItem("my-cart",JSON.stringify(cartItems))
+  })
   const onAdd = (product) => {
     const exist = cartItems.find((x) => x.id === product.id);
     if (exist) {
